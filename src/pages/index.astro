@@ -4,11 +4,11 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="portfolio | alex foster">
-	<main class="p-16 max-w-screen-md mx-auto">
-		<header class="flex justify-between mb-8 items-center">
+	<main class="p-8 max-w-screen-sm mx-auto">
+		<header class="flex justify-between py-4 items-center">
 			<div>
 				<h1 class="text-lg font-semibold">alex foster</h1>
-				<p class="text-md text-gray-500">software engineer</p>
+				<p class="text-md text-sm text-gray-400">software engineer</p>
 			</div>
 			<div class="flex gap-6">
 				<a href="https://github.com/alexf37">
@@ -21,9 +21,9 @@ import Card from '../components/Card.astro';
 				</a>
 			</div>
 		</header>
-		<section id="projects">
-			<h1 class="font-mono mb-3 text-lg tracking-tighter">projects</h1>
-			<ul role="list" class="flex flex-col gap-3">
+		<section id="projects" class="pt-6">
+			<h1 class="font-mono text-lg font-light tracking-tighter">projects</h1>
+			<ul role="list" class="space-y-4 py-4 text-sm">
 				<Card
 					href="https://quorumed.com"
 					title="quorum"
@@ -37,7 +37,7 @@ import Card from '../components/Card.astro';
 				<Card
 					href="https://floodwatch.io"
 					title="floodwatch"
-					body="research project for forecasting, reporting, and aggregation of weather and flood data."
+					body="research project for forecasting, reporting, and aggregating weather and flood data."
 				/>
 				<Card
 					href="https://spotchat.alexfoster.dev"
