@@ -3,16 +3,27 @@ interface Props {
   title: string;
   body: string;
   href: string;
+  badge?: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, badge } = Astro.props;
 ---
 
 <li class="link-card">
   <a href={href} target="_blank">
-    <h2 class="font-medium underline underline-offset-4 mb-1.5">
-      {title}
-    </h2>
+    <div class="mb-1.5">
+      <h2 class="inline font-medium underline underline-offset-4">
+        {title}
+      </h2>
+      {
+        badge && (
+          <span class="dark:bg-gray-800 bg-gray-200 dark:text-gray-200 text-gray-900  ml-2 rounded-lg px-2 py-0.5 font-mono text-xs no-underline">
+            {badge}
+          </span>
+        )
+      }
+    </div>
+
     <p class="text-gray-400">
       {body}
     </p>
